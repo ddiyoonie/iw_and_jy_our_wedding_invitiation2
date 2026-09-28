@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="이인원 ♥ 김지윤 결혼합니다. 2027년 8월 22일 라마다서울신도림호텔 세인트 그레이스 홀" />
+  <title>IN WON & JI YOON — OUR WEDDING</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <main class="invite-shell">
+    <!-- music: put your file at music/bgm.mp3 -->
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="배경음악 재생/정지">
+      <span class="music-disc">♪</span>
+    </button>
+    <audio id="bgm" src="music/wedding_music_첫사랑.mp3" loop preload="auto" autoplay></audio>
+
+    <!-- 01. COVER -->
+    <section class="cover section-black">
+      <figure class="cover-photo photo-fallback">
+        <img src="images/gallery2.jpg" alt="이인원 김지윤 웨딩 사진" />
+        <div class="cover-shade"></div>
+        <div class="cover-names cover-name-left"><small>신부</small><b>김지윤</b></div>
+        <div class="cover-names cover-name-right"><small>신랑</small><b>이인원</b></div>
+        <div class="cover-copy">
+          <p class="eyebrow pink">YOU'RE INVITED TO</p>
+          <h1>Our Wedding</h1>
+          <p class="cover-date">2027.08.22. SUN 12:10 PM</p>
+          <p class="cover-venue">RAMADA SEOUL SINDORIM · SAINT GRACE HALL</p>
+        </div>
+      </figure>
+    </section>
+
+    <!-- 02. SAVE THE DATE -->
+    <section class="save-date section-black section-pad">
+      <div class="oval-title">SAVE THE DATE</div>
+      <div class="date-simple">
+        <strong>2027</strong>
+        <span>08 · 22</span>
+        <em>SUNDAY · 12:10 PM</em>
+      </div>
+    </section>
+
+    <!-- 03. ENVELOPE -->
+    <section class="section-black envelope-wrap section-pad-tight">
+      <article class="envelope-card">
+        <div class="envelope-flap"></div>
+        <p class="envelope-top">YOU'RE INVITED TO</p>
+        <h2>Our Wedding</h2><br>
+        <p class="envelope-date">2027.08.22. SUN<br>12:10 PM</p>
+        <p class="envelope-venue">RAMADA SEOUL SINDORIM<br>SAINT GRACE · 5F</p>
+      </article>
+    </section>
+
+    <!-- 04. INVITATION MESSAGE -->
+    <section class="message-section section-black section-pad">
+      <p class="hand-message">
+        같은 학교, 같은 과에서 만나<br>
+        어느새 여덟 번째 여름을 함께 맞이합니다.<br><br>
+        귀설레는 날에는 누구보다 가까이에서 웃어주고,<br>
+        힘든 날에는 말없이 곁을 지켜주며<br>
+        그렇게 서로의 가장 편안하고 소중한 사람이 되었습니다.<br><br>
+        이제 연인으로 함께한 여덟 해를 지나<br>
+        앞으로의 모든 계절을 함께 살아가려 합니다.<br><br>
+        저희의 여덟 번째 여름이<br>
+        평생의 시작이 되는 날,<br>
+        소중한 걸음으로 함께해 주세요.<br><br>
+      </p>
+      <div class="couple-line">
+        <div><span>GROOM</span><b>이인원</b></div>
+        <i>♥</i>
+        <div><span>BRIDE</span><b>김지윤</b></div>
+      </div>
+    </section>
+
+    <!-- 05. SECOND MAIN PHOTO -->
+    <section class="full-photo photo-fallback">
+      <img src="images/hero.jpg" alt="웨딩 사진 두 번째" />
+    </section>
+    
+
+    <!-- 08. GALLERY -->
+    <section class="gallery-section">
+      <div class="section-title">
+        <p>OUR MOMENTS</p>
+        <h2>Gallery</h2>
+      </div>
+    
+      <div class="gallery-grid" id="galleryGrid">
+        <img src="images/gallery1.jpg" alt="gallery">
+        <img src="images/gallery2.jpg" alt="gallery">
+        <img src="images/gallery3.jpg" alt="gallery">
+        <img src="images/gallery4.jpg" alt="gallery">
+        <img src="images/gallery5.jpg" alt="gallery">
+        <img src="images/gallery6.jpg" alt="gallery">
+        <img src="images/gallery7.jpg" alt="gallery">
+        <img src="images/gallery8.jpg" alt="gallery">
+        <img src="images/gallery9.jpg" alt="gallery">
+        <img src="images/gallery10.jpg" alt="gallery">
+        <img src="images/gallery11.jpg" alt="gallery">
+        <img src="images/gallery12.jpg" alt="gallery">
+      </div>
+    
+      <button class="gallery-more-btn" id="galleryMoreBtn">
+        더보기
+      </button>
+    </section>
+    
+    <!-- 갤러리 확대 -->
+    <div class="gallery-modal" id="galleryModal">
+      <button class="gallery-close" id="galleryClose">×</button>
+    
+      <button class="gallery-arrow gallery-prev" id="galleryPrev">
+        ‹
+      </button>
+    
+      <div class="gallery-modal-inner">
+        <img id="galleryModalImage" src="" alt="">
+      </div>
+    
+      <button class="gallery-arrow gallery-next" id="galleryNext">
+        ›
+      </button>
+    </div>
+
+    <!-- 09. CALENDAR -->
+    <section class="calendar-section section-white section-pad">
+      <div class="oval-title dark">WEDDING DAY</div>
+      <div class="calendar-headline">
+        <span>AUGUST</span>
+        <strong>22</strong>
+        <em>2027 · SUNDAY · 12:10 PM</em>
+      </div>
+      <div class="calendar" id="calendar"></div>
+      <p class="dday" id="dday"></p>
+    </section>
+
+    <!-- 10. LOCATION -->
+    <section class="location-section section-white section-pad">
+      <div class="oval-title pink-dark">오시는 길</div>
+      <h2>라마다서울신도림호텔</h2>
+      <p class="hall">5F · 세인트 그레이스 홀</p>
+      <div class="address-line">
+        <span id="addressText">서울특별시 구로구 경인로 624</span>
+        <button type="button" onclick="copyText(document.getElementById('addressText').innerText)">복사하기</button>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          title="라마다서울신도림호텔 지도"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EA%B2%BD%EC%9D%B8%EB%A1%9C%20624&z=16&output=embed">
+        </iframe>
+      </div>
+
+      <div class="transport">
+        <article><b>🚃 지하철</b><p>1·2호선 신도림역 하차 후 이동</p></article>
+        <article><b>🚌 버스</b><p>신도림역 인근 정류장 하차 후 도보 이동</p></article>
+        <article><b>🚗 자차</b><p>내비게이션에 ‘라마다서울신도림호텔’을 검색해 주세요.</p></article>
+      </div>
+
+      <div class="map-links">
+        <a href="https://map.naver.com/p/search/%EB%9D%BC%EB%A7%88%EB%8B%A4%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%8F%84%EB%A6%BC%ED%98%B8%ED%85%94" target="_blank" rel="noopener">NAVER MAP</a>
+        <a href="https://map.kakao.com/?q=%EB%9D%BC%EB%A7%88%EB%8B%A4%EC%84%9C%EC%9A%B8%EC%8B%A0%EB%8F%84%EB%A6%BC%ED%98%B8%ED%85%94" target="_blank" rel="noopener">KAKAO MAP</a>
+      </div>
+    </section>
+
+    <!-- 11. ACCOUNT -->
+    <section class="account-section section-black section-pad">
+      <div class="oval-title filled">마음 전하실 곳</div>
+      <p class="account-intro">참석이 어려우신 분들을 위해<br>축하의 마음을 전하실 곳을 안내드립니다.</p>
+
+      <details class="account-box">
+        <summary>🤵🏻‍♂️ 신랑 측 계좌번호</summary>
+        <div class="account-row">
+          <span>신랑 이인원</span>
+          <b>은행명 000-0000-0000</b>
+          <button type="button" onclick="copyAccount('000-0000-0000')">복사하기</button>
+        </div>
+      </details>
+
+      <details class="account-box">
+        <summary>👰🏻‍♀️ 신부 측 계좌번호</summary>
+        <div class="account-row">
+          <span>신부 김지윤</span>
+          <b>은행명 000-0000-0000</b>
+          <button type="button" onclick="copyAccount('000-0000-0000')">복사하기</button>
+        </div>
+      </details>
+    </section>
+
+    <!-- 12. SHARE -->
+    <section class="share-section section-white section-pad-tight">
+      <button class="share-primary" id="shareButton" type="button">청첩장 공유하기</button>
+      <button class="share-secondary" type="button" onclick="copyText(location.href)">청첩장 주소 복사하기</button>
+      <p class="copyright">IN WON ♥ JI YOON · 2027</p>
+    </section>
+  </main>
+
+  <!-- GALLERY MODAL -->
+  <div class="gallery-modal" id="galleryModal" hidden>
+    <button class="modal-close" id="galleryClose" type="button" aria-label="닫기">×</button>
+    <button class="modal-arrow prev" id="galleryPrev" type="button" aria-label="이전">‹</button>
+    <figure><img id="galleryModalImage" src="" alt="갤러리 큰 이미지" /></figure>
+    <button class="modal-arrow next" id="galleryNext" type="button" aria-label="다음">›</button>
+    <span class="modal-count" id="galleryCount"></span>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
